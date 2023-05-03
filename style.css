@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* NavBar */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-image: url(img/banner-bg.png);
+  background-repeat: no-repeat;
+  /* background-position: top; */
+  background-size: cover;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+}
+
+header{
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+}
+.logo{
+  font-size: 2rem;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between; 
+}
+
+.nav_ul_links li a {
+  color: rgb(216, 215, 215);
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight:500;
+}
+.nav_ul_links li a:hover{
+  color: white;
+} 
+
+.nav_social_links{
+  border: 1px white solid;
+  border-radius: 50%;
+  width: 50px;
+  color: white;
+}
+
+.nav_call_to_action{
+  border: 2px white solid;
+  padding: 15px 20px;
+  
+}
+
+/* Section Hero */
+.hero{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+.hero_info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero_info span{
+  width: fit-content;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: 1px solid white;
+  display: block;
+  padding: 10px 1rem;
+  background-image: linear-gradient(-20deg, #792e28 0%, #3b2e6b 100%);
+}
+
+h1{
+  font-size: 3.5rem;
+}
+
+.hero_info p{
+  line-height: 1.8;
+  font-weight: 300;
+  color: rgb(216, 215, 215);
+
+}
+.hero_info a{
+  margin-top: 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hero_info a i{
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.hero_picture{
+  width: 50%;
+}
+.hero_picture img{
+  width: 450px;
+  animation: movimiento 2.5s linear infinite;
+}
+@keyframes movimiento{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
