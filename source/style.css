@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../img/banner-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  width: 80%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: background-color 0.5s ease;
+}
+
+.scrolled {
+  background-color: #121212;
+  transition: background-color 0.5s ease;
+}
+
+.nav_logo {
+  display: block;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav .nav_ul_links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.nav_ul_links li a {
+  color: rgb(216, 215, 215);
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav_ul_links li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.nav_social_links {
+  border: 1px white solid;
+  border-radius: 50%;
+  width: 50px;
+  color: white;
+  background-color:#221f22;
+}
+
+.nav_call_to_action {
+  border: 2px white solid;
+  padding: 15px 20px;
+  background-color:#221f22;
+}
+
+.panel-btn {
+  display:none !important;
+}
+
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(31, 23, 41, 0.85);
+  transition: transform 0.3s ease;
+  transform: translate(-100%, 0);
+}
+
+.panel.is-active {
+  transform: translate(0, 0);
+}
+
+.panel .menu {
+  margin-top: 6rem;
+  flex-direction: column;
+  width: inherit;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  background-color: #4d186bcb;
+
+}
+
+/* section formas */
+
+section{
+  padding-top: 5rem;
+  height: 100vh;
+}
+
+
+/* Section Hero */
+
+
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.hero_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.hero_info p {
+  line-height: 1.8;
+  font-weight: 300;
+  color: rgb(216, 215, 215);
+
+}
+
+.hero_info a {
+  margin-top: 2rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hero_info a i {
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+  margin-left: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.hero_picture {
+  width: 50%;
+}
+
+.hero_picture img {
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+  position: relative;
+  width: 450px;
+  height: 450px;
+  animation: movimiento 2.5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes movimiento {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Section Skills */
+
+.skill_paragraph{
+  background-color: #221f22;
+  padding: 2rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+
+
+/* Responsive */
+
+@media (max-width:875px) {
+  
+  header {
+    display: none;
+  }
+
+  .panel-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAB3DA !important;
+  }
+
+  section{
+    height: auto;
+    padding-top: 3rem;
+  }
+
+  .hero{
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 0 auto;    
+    height: 100vh;
+  }
+  .hero_picture{
+    width: 100%;
+  }
+
+  .hero_picture img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+  }
+
+  .hero_info{
+    width: 100%;
+  }
+
+  h1{
+    font-size: 2.3rem;
+  }
+
+}

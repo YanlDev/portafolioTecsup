@@ -5,17 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./source/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Portofolio</title>
 </head>
 <body>
   <header>
     <nav>
-      <p class="logo">YANIV CARREON</p>
+      <span class="nav_logo">YANL</span>
       <div class="nav_links">
         <ul class="nav_ul_links">
           <li><a href="#">Home</a></li>
-          <li><a href="#">Skill</a></li>
+          <li><a href="#skill">Skill</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#" class="nav_social_links"><i class="fa-brands fa-linkedin-in"></i></a></li>
           <li><a href="#" class="nav_social_links"><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -25,10 +26,25 @@
       </div>
     </nav>
   </header>
+
+  <button class="panel-btn hamburger hamburger--slider" type="button" title="btn-mobile">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  
+  <aside class="panel">
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#skill">Skill</a>
+      <a href="#">Projects</a>
+      <a href="#">Let's Connect</a>
+    </nav>
+  </aside>
+
   <main>
     <section class="hero">
       <div class="hero_info">
-        <span>Welcome to my Portofolio</span>
         <h1>Hi I'm Yaniv Web Dev</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo dicta voluptatum cupiditate veniam impedit repudiandae corrupti. Magnam provident eaque quo minus, nobis fuga, accusantium eos veniam eius enim recusandae unde aut ratione aliquid sint obcaecati. Porro dolorum.</p>
         <a href="#" class="hero_call_to_action">Lest's Connect <i class="fa-solid fa-arrow-right"></i></a>
@@ -37,7 +53,19 @@
         <img src="img/Astronauta.svg" alt="Imagen de un Astronauta">
       </figure>
     </section>
+
+    <section id="skill">
+      <div class="skill_paragraph">
+        <h2>Skills</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus laboriosam optio quasi fuga ducimus.
+          Voluptate. adipisicing elit. Necessitatibus laboriosam optio quasi.</p>
+        <div class="skills_percentages">
+        </div>
+      </div>
+    </section>
+    
     
   </main>
+<script src="source/burgerMenu.js" type="module"></script>
 </body>
 </html>
